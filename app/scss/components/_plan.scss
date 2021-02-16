@@ -1,0 +1,79 @@
+.plan{
+  &__inner{
+    padding: 80px 28px 150px;
+  }
+  &__intro{
+    text-align: center;
+    max-width: 555px;
+    margin: 0 auto 60px;
+  }
+  &__types{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__card{
+    padding: 275px 70px 50px;
+    background-image: url('../images/box.svg');
+    background-repeat: no-repeat;
+    background-position: center 80px;
+    border: 2px solid #DDDDDD;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    &--active{
+      border-color: $accent;
+    }
+  }
+  &__name{
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+  }
+  &__list-item{
+    padding-left: 44px;
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 2.1;
+    &::before{
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      left: 0;
+      top: 2px;
+      background-image: url("../images/icons/check-mark.svg");
+      background-repeat: no-repeat;
+    }
+  }
+  &__select{
+    margin-top: auto;
+    text-align: center;
+
+    p{
+      font-weight: 500;
+      color: $secondary;
+      margin-bottom: 20px;
+    }
+    span{
+      font-weight: 400;
+      color: $text-main;
+    }
+  }
+  &__btn{
+    border:none;
+    color: $accent;
+    background-color: transparent;
+    padding: 13px 63px;
+    border: 2px solid $accent;
+    border-radius: 50px;
+    outline: transparent;
+    cursor: pointer;
+    &--active{
+      background-color: $accent;
+      color: #fff;
+    }
+  }
+}

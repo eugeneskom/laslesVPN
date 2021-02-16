@@ -1,0 +1,26 @@
+body{
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.875;
+  color: $text-main;
+}
+
+.container{
+  max-width: 1160px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.btn{
+  @extend %btn;
+}
+
+.title{
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 1.43;
+  text-transform: capitalize;
+  color: $secondary;
+  margin-bottom: 20px;
+}
