@@ -1,0 +1,8 @@
+.clients{
+  padding: 35px 15px 50px;
+  &__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
