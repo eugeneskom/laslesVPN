@@ -1,11 +1,17 @@
 $(function () {
-  import Swiper from '../../node_modules/swiper/swiper';
-  // import Swiper styles
+  
+
   const swiper = new Swiper('.clients__list', {
     // Optional parameters
     slidesPerView: 3,
     loop: true,
     speed: 400,
+  });
+  $('.header__connect-btn').on('click', function (e) {
+    e.preventDefault();
+    $('.header__connect-btn').removeClass('header__connect-btn--active');
+    $(this).addClass('header__connect-btn--active');
+
   });
 
 
