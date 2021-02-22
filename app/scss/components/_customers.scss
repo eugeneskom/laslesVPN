@@ -130,8 +130,18 @@
 
   &__card-heading {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 20px;
+  }
+  &__card-avatar{
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    margin-right: 21px;
+  }
+  .rating{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
   }
 
   &__name {

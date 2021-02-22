@@ -34,7 +34,7 @@ $(function () {
     },
   });
   const swiper2 = new Swiper('.customers__feedback.swiper-container', {
-    slidesPerView: 3,
+    slidesPerView:3,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
