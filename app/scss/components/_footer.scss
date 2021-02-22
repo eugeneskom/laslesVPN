@@ -19,7 +19,15 @@
   &__block-text {
     max-width: 371px;
   }
-  &__proposals{
+
+  &__btn {
+    padding: 17px 65px;
+  }
+  &__copy{
+    font-weight: 500;
+  }
+
+  &__proposals {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -55,19 +63,28 @@
   &__social-img {
     background-size: 100%;
   }
-  &__columns{
+
+  &__columns {
     display: flex;
     justify-content: space-between;
   }
-  &__list-link{
-    &:not(:last-child){
+
+  &__list-item {
+    &:not(:last-child) {
       margin-bottom: 10px;
     }
-    &--heading{
+  }
+
+  &__list-link {
+    display: block;
+
+    &--heading {
       font-weight: 500;
       font-size: 18px;
       line-height: 1.7;
       margin-bottom: 20px;
     }
+
+
   }
 }

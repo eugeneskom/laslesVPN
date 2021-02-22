@@ -12,7 +12,7 @@
     justify-content: space-between;
   }
   &__card{
-    padding: 275px 70px 50px;
+    padding: 275px 67px 50px;
     background-image: url('../images/box.svg');
     background-repeat: no-repeat;
     background-position: center 80px;
@@ -30,6 +30,9 @@
     font-size: 18px;
     line-height: 1.7;
     margin-bottom: 30px;
+  }
+  &__list{
+    margin-bottom: 44px;
   }
   &__list-item{
     padding-left: 44px;
@@ -53,6 +56,8 @@
     text-align: center;
 
     p{
+      font-size: 25px;
+      line-height: 1.2;
       font-weight: 500;
       color: $secondary;
       margin-bottom: 20px;
@@ -66,11 +71,12 @@
     border:none;
     color: $accent;
     background-color: transparent;
-    padding: 13px 63px;
+    padding: 5px 63px;
     border: 2px solid $accent;
     border-radius: 50px;
     outline: transparent;
     cursor: pointer;
+    font-weight: 700;
     &--active{
       background-color: $accent;
       color: #fff;

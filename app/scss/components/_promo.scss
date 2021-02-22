@@ -1,7 +1,7 @@
 .promo{
   background-color:#F6F6F6;
   &__inner{
-    padding: 153px 0 131px;
+    padding: 153px 0 132px;
     background-image: url('../images/content/about.svg');
     background-repeat: no-repeat;
     background-position: 36px 100px;
@@ -19,6 +19,7 @@
     position: relative;
     padding-left: 35px;
     font-size: 14px;
+    line-height: 2.1;
     &::before{
       content: "";
       position: absolute;
