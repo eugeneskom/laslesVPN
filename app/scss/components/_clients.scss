@@ -1,8 +1,30 @@
-.clients{
-  padding: 35px 15px 50px;
-  &__list{
+.clients {
+  &__wrapper {
+    padding: 55px 0 97px;
+  }
+
+  &__list {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &__item {
+    width: 20%;
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    width: 20%;
+  }
+
+  .swiper-slide-prev,
+  .swiper-slide-active,
+  .swiper-slide-next {
+    width: 100px;
   }
 }

@@ -1,0 +1,137 @@
+.customers {
+  padding-bottom: 100px;
+  &__inner {
+    padding: 97px 0 66px;
+  }
+
+  &__content {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    max-width: 448px;
+    margin: 0 auto;
+  }
+
+  &__text {
+    max-width: 555px;
+    margin: 0 auto;
+  }
+
+  &__card.swiper-slide {
+    width: 400px !important;
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+
+  .swiper-wrapper {
+    padding: 0 0 185px;
+  }
+
+  .swiper-container {
+    max-width: 1300px;
+  }
+  .swiper-slide-active{
+    border: 2px solid $accent;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 90%;
+    background-color: $accent;
+    color: #fff;
+    font-size: 10px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+  }
+
+  .swiper-button-prev {
+    right: 100px;
+    left: auto;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev,
+  .swiper-button-disabled {
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .swiper-button-next {
+    background-image: url(../../images/icons/next-arrow.svg);
+  }
+
+  .swiper-button-prev {
+    background-image: url(../../images/icons/prev-arrow.svg);
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    display: none;
+  }
+
+  .swiper-button-prev.swiper-button-disabled,
+  .swiper-button-next.swiper-button-disabled {
+    background-color: #fff;
+    opacity: 1;
+    border: 2px solid $accent;
+  }
+  .swiper-button-prev.swiper-button-disabled{
+    background-image: url(../../images/icons/prev-arrow--disable.svg);
+
+  }
+  .swiper-button-next.swiper-button-disabled{
+    background-image: url(../../images/icons/next-arrow--disable.svg);
+
+  }
+
+
+  .swiper-pagination {
+    text-align: left;
+    width: 50%;
+  }
+  .swiper-pagination-bullet{
+    width: 15px;
+    height: 15px;
+    background-color: #8d9196;
+  }
+  .swiper-pagination-bullet-active{
+    width: 45px;
+    height: 15px;
+    border-radius: 10px;
+    background-color: $accent;
+  }
+
+
+
+  &__card {
+    border-radius: 10px;
+    background: #FFFFFF;
+    border: 2px solid #DDDDDD;
+    padding: 30px;
+    width: 400px;
+    height: 230px;
+
+  }
+
+  &__card-heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  &__region {
+    font-size: 14px;
+    line-height: 2.1;
+  }
+}
