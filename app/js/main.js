@@ -21,6 +21,7 @@ $(function () {
   $(".rateyo").rateYo({
     maxValue: 1,
     numStars: 1,
+    rating: "90%",
     starWidth: "16px"
   });
 
