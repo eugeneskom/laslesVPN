@@ -1,17 +1,20 @@
-.plan{
-  &__inner{
+.plan {
+  &__inner {
     padding: 80px 28px 150px;
   }
-  &__intro{
+
+  &__intro {
     text-align: center;
     max-width: 555px;
     margin: 0 auto 60px;
   }
-  &__types{
+
+  &__types {
     display: flex;
     justify-content: space-between;
   }
-  &__card{
+
+  &__card {
     padding: 275px 67px 50px;
     background-image: url('../images/box.svg');
     background-repeat: no-repeat;
@@ -20,27 +23,32 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    &--active{
+
+    &--active {
       border-color: $accent;
     }
   }
-  &__name{
+
+  &__name {
     text-align: center;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.7;
     margin-bottom: 30px;
   }
-  &__list{
+
+  &__list {
     margin-bottom: 44px;
   }
-  &__list-item{
+
+  &__list-item {
     padding-left: 44px;
     position: relative;
     margin-bottom: 10px;
     font-size: 14px;
     line-height: 2.1;
-    &::before{
+
+    &::before {
       content: "";
       position: absolute;
       width: 24px;
@@ -51,24 +59,27 @@
       background-repeat: no-repeat;
     }
   }
-  &__select{
+
+  &__select {
     margin-top: auto;
     text-align: center;
 
-    p{
+    p {
       font-size: 25px;
       line-height: 1.2;
       font-weight: 500;
       color: $secondary;
       margin-bottom: 20px;
     }
-    span{
+
+    span {
       font-weight: 400;
       color: $text-main;
     }
   }
-  &__btn{
-    border:none;
+
+  &__btn {
+    border: none;
     color: $accent;
     background-color: transparent;
     padding: 5px 63px;
@@ -77,7 +88,17 @@
     outline: transparent;
     cursor: pointer;
     font-weight: 700;
-    &--active{
+    transition: all .3s;
+
+    &:hover {
+      background-color: #ff3131;
+
+      font-weight: 400;
+      color: #fff;
+      border: 1px solid #ff3131;
+    }
+
+    &--active {
       background-color: $accent;
       color: #fff;
     }

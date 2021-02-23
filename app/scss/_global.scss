@@ -13,6 +13,14 @@ body {
   margin: 0 auto;
 }
 
+.logo {
+  &__img {
+    max-width: 150px;
+    max-height: 37px;
+    object-fit: cover;
+  }
+}
+
 .btn {
   @extend %btn;
 }
@@ -24,4 +32,24 @@ body {
   text-transform: capitalize;
   color: $secondary;
   margin-bottom: 20px;
+}
+
+@mixin text-clamp($lines: 2, $line-height: false) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+
+  // Fallback for non-Webkit browsers
+  // (won't show `…` at the end of the block)
+  @if $line-height {
+      max-height: $line-height * $lines * 1px;
+  }
+}
+
+
+.intro-text{
+  max-width: 555px;
+  margin: 0 auto;
+  @include text-clamp(3);
 }

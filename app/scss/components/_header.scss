@@ -63,7 +63,9 @@
     position: absolute;
     bottom: -26px;
     right: -65px;
-
+    max-width: 612px;
+    max-height: 382px;
+    object-fit: cover;
   }
 
   &__content {
@@ -84,6 +86,7 @@
   &__content-text {
     font-weight: 500;
     margin-bottom: 50px;
+    @include text-clamp(3);
   }
 
 }

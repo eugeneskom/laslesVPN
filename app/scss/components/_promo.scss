@@ -1,26 +1,31 @@
-.promo{
-  background-color:#F6F6F6;
-  &__inner{
+.promo {
+  background-color: #F6F6F6;
+
+  &__inner {
     padding: 153px 0 132px;
-    background-image: url('../images/content/about.svg');
     background-repeat: no-repeat;
     background-position: 36px 100px;
     display: flex;
     justify-content: flex-end;
   }
-  &__content{
+
+  &__content {
     max-width: 428px;
   }
-  &__text{
+
+  &__text {
     margin-bottom: 20px;
     font-weight: 500;
+    @include text-clamp(3);
   }
-  &__item{
+
+  &__item {
     position: relative;
     padding-left: 35px;
     font-size: 14px;
     line-height: 2.1;
-    &::before{
+
+    &::before {
       content: "";
       position: absolute;
       width: 25px;
@@ -29,9 +34,10 @@
       left: 0;
       top: 0;
     }
-    &:not(:last-child){
+
+    &:not(:last-child) {
       margin-bottom: 15px;
     }
   }
-  
+
 }

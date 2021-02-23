@@ -26,10 +26,10 @@
               <a class="header__link" href="#">About</a>
             </li>
             <li class="header__item">
-              <a class="header__link" href="#">Features</a>
+              <a class="header__link" href="#features">Features</a>
             </li>
             <li class="header__item">
-              <a class="header__link" href="#">Pricing</a>
+              <a class="header__link" href="#pricing">Pricing</a>
             </li>
             <li class="header__item">
               <a class="header__link" href="#">Testimonials</a>
@@ -60,7 +60,7 @@
               </p>
             </div>
 
-            <button class="btn header__btn">Get Started</button>
+            <button class="btn header__btn" type="button">Get Started</button>
             <img class="header__bg" src="images/content/header-content.svg">
           </div>
         </div>
@@ -95,9 +95,9 @@
         </div>
       </div>
     </div>
-    <section class="promo">
+    <section class="promo" id="features">
       <div class="container">
-        <div class="promo__inner">
+        <div class="promo__inner" style="background-image: url('images/content/about.svg');">
           <div class="promo__content">
             <h2 class="title">We Provide Many Features You Can Use</h2>
             <div class="promo__text">
@@ -114,12 +114,12 @@
       </div>
     </section>
 
-    <section class="plan">
+    <section class="plan" id="pricing">
       <div class="container">
         <div class="plan__inner">
           <div class="plan__intro">
             <h2 class="title plan__title">Choose Your Plan</h2>
-            <div class="plan__text">
+            <div class="intro-text">
               <p>Let's choose the package that is best for you and explore it happily and cheerfully.</p>
             </div>
           </div>
@@ -182,7 +182,7 @@
         <div class="global__inner">
           <div class="global__content">
             <h2 class="title global__title">Huge Global Network of Fast VPN</h2>
-            <div class="global__text">
+            <div class="intro-text">
               <p>See LaslesVPN everywhere to make it easier for you when you move locations.</p>
             </div>
           </div>
@@ -220,7 +220,7 @@
       <div class="customers__inner">
         <div class="customers__content">
           <h2 class="title customers__title">Trusted by Thousands of Happy Customer</h2>
-          <div class="customers__text">
+          <div class="intro-text">
             <p>These are the stories of our customers who have joined us with great pleasure when using this crazy
               feature.</p>
           </div>
@@ -231,7 +231,7 @@
             <div class="customers__card swiper-slide ">
               <div class="customers__card-heading">
                 <div class="customers__card-avatar">
-                  <img src="images/customers/1.png" alt="">
+                  <img src="images/customers/1.png" alt="Viezh Robert">
                 </div>
                 <div class="customers__card-person">
                   <div class="customers__name">
@@ -246,7 +246,7 @@
                   <div class="rating__star rateyo"></div>
                 </div>
               </div>
-              <div class="customers__content">
+              <div class="customers__card-content">
                 <blockquote>Wow... I am very happy to use this VPN, it turned out to be more than my expectations and
                   so far there have been no problems. LaslesVPN always the best.</blockquote>
               </div>
@@ -255,7 +255,7 @@
             <div class=" customers__card  swiper-slide">
               <div class="customers__card-heading">
                 <div class="customers__card-avatar">
-                  <img src="images/customers/2.png" alt="">
+                  <img src="images/customers/2.png" alt="Yessica Christy">
                 </div>
                 <div class="customers__card-person">
                   <div class="customers__name">
@@ -278,7 +278,7 @@
             <div class="customers__card swiper-slide ">
               <div class="customers__card-heading">
                 <div class="customers__card-avatar">
-                  <img src="images/customers/3.png" alt="">
+                  <img src="images/customers/3.png" alt="Kim Young Jou">
                 </div>
                 <div class="customers__card-person">
                   <div class="customers__name">
@@ -302,7 +302,7 @@
             <div class="customers__card swiper-slide ">
               <div class="customers__card-heading">
                 <div class="customers__card-avatar">
-                  <img src="images/customers/3.png" alt="">
+                  <img src="images/customers/3.png" alt="Kim Young Jou">
                 </div>
                 <div class="customers__card-person">
                   <div class="customers__name">
@@ -323,64 +323,13 @@
               </div>
             </div>
 
-            <div class="customers__card swiper-slide ">
-              <div class="customers__card-heading">
-                <div class="customers__card-avatar">
-                  <img src="images/customers/3.png" alt="">
-                </div>
-                <div class="customers__card-person">
-                  <div class="customers__name">
-                    <p>Kim Young Jou</p>
-                  </div>
-                  <div class="customers__region">
-                    <p>Seoul, South Korea</p>
-                  </div>
-                </div>
-                <div class="rating">
-                  <div class="rating__score">4.5</div>
-                  <div class="rating__star rateyo"></div>
-                </div>
-              </div>
-              <div class="customers__card-content">
-                <blockquote>This is very unusual for my business that currently requires a virtual private network
-                  that has high security.</blockquote>
-              </div>
-            </div>
-
-            <div class="customers__card swiper-slide ">
-              <div class="customers__card-heading">
-                <div class="customers__card-avatar">
-                  <img src="images/customers/3.png" alt="">
-                </div>
-                <div class="customers__card-person">
-                  <div class="customers__name">
-                    <p>Kim Young Jou</p>
-                  </div>
-                  <div class="customers__region">
-                    <p>Seoul, South Korea</p>
-                  </div>
-                </div>
-                <div class="rating">
-                  <div class="rating__score">4.5</div>
-                  <div class="rating__star rateyo"></div>
-                </div>
-              </div>
-              <div class="customers__card-content">
-                <blockquote>This is very unusual for my business that currently requires a virtual private network
-                  that has high security.</blockquote>
-              </div>
-            </div>
-
-
           </div>
 
           <div class="swiper-pagination"></div>
 
           <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next">
+          <div class="swiper-button-next"></div>
 
-
-          </div>
         </div>
       </div>
     </section>
@@ -398,7 +347,7 @@
             <p>Let's subscribe with us and find the fun.</p>
           </div>
         </div>
-        <button type="button" class="btn footer__btn">
+        <button type="button" class="btn footer__btn" type="submit">
           Subscribe Now
         </button>
       </div>
@@ -412,17 +361,17 @@
           </div>
           <ul class="footer__social-list">
             <li class="footer__social-item">
-              <a class="footer__social-link" href="">
+              <a class="footer__social-link" href="#">
                 <img class="footer__social-img" src="images/icons/social/facebook.svg" alt="facebook">
               </a>
             </li>
             <li class="footer__social-item">
-              <a class="footer__social-link" href="">
+              <a class="footer__social-link" href="#">
                 <img class="footer__social-img" src="images/icons/social/twitter.svg" alt="twitter">
               </a>
             </li>
             <li class="footer__social-item">
-              <a class="footer__social-link" href="">
+              <a class="footer__social-link" href="#">
                 <img class="footer__social-img" src="images/icons/social/instagram.svg" alt="iinstagram">
               </a>
             </li>
