@@ -1,15 +1,3 @@
-@mixin r($width) {
-  @media only screen and (max-width: $width+ "px") {
-    @content;
-  }
-}
-
-@mixin rmin($width) {
-  @media only screen and (min-width: $width+ "px") {
-    @content;
-  }
-}
-
 @mixin text-clamp($lines: 2, $line-height: false) {
   overflow: hidden;
   display: -webkit-box;
@@ -22,3 +10,16 @@
       max-height: $line-height * $lines * 1px;
   }
 }
+
+@mixin r($width) {
+  @media only screen and (max-width: $width+ "px") {
+    @content;
+  }
+}
+
+@mixin rmin($width) {
+  @media only screen and (min-width: $width+ "px") {
+    @content;
+  }
+}
+

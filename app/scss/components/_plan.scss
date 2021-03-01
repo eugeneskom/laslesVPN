@@ -16,13 +16,13 @@
 
   &__card {
     padding: 275px 67px 50px;
-    background-image: url('../images/box.svg');
     background-repeat: no-repeat;
     background-position: center 80px;
     border: 2px solid #DDDDDD;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    background-color: #fff;
 
     &--active {
       border-color: $accent;
@@ -79,7 +79,6 @@
   }
 
   &__btn {
-    border: none;
     color: $accent;
     background-color: transparent;
     padding: 5px 63px;
@@ -88,19 +87,30 @@
     outline: transparent;
     cursor: pointer;
     font-weight: 700;
-    transition: all .3s;
+    transition: all 0.3s;
+    position: relative;
 
     &:hover {
       background-color: #ff3131;
-
-      font-weight: 400;
       color: #fff;
-      border: 1px solid #ff3131;
+      border-color:#ff3131;
+    }
+    &:active{
+      background-color: #c70505;
+      color: #fff;
+      border-color:#c70505;
+    }
+    &:focus{
+    box-shadow: 0 0 0 2pt rgba(112, 4, 4, 0.94);
     }
 
     &--active {
       background-color: $accent;
       color: #fff;
+    }
+    &::after{
+      content: "";
+      position: absolute;
     }
   }
 }

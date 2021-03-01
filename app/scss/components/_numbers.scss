@@ -1,10 +1,26 @@
 .numbers {
-  padding: 30px 91px;
-
+  
   &__items {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    padding: 30px 91px;
+      // display: grid;
+      // grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 10px;
+    position: relative;
+    background-color: #fff;
 
+    &::after {
+      content: "";
+      position: absolute;
+      top: 52px;
+      right: 36px;
+      bottom: -42px;
+      left: 36px;
+      background: #0D1025;
+      opacity: 0.06;
+      filter: blur(114px);
+      border-radius: 10px;
+    }
   }
 
   &__item {
@@ -19,9 +35,13 @@
     padding-left: 80px;
     position: relative;
 
-    &::after {
+    &::after,
+    &::before {
       content: "";
       position: absolute;
+    }
+
+    &::after {
       width: 55px;
       height: 55px;
       background-color: #FFECEC;
@@ -32,8 +52,6 @@
     }
 
     &::before {
-      content: "";
-      position: absolute;
       width: 24px;
       height: 24px;
       background-repeat: no-repeat;

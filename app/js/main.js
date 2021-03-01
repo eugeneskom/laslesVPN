@@ -35,11 +35,10 @@ $(function () {
     },
   });
   const swiper2 = new Swiper('.customers__feedback.swiper-container', {
-    slidesPerView: 3,
-    // slidesPerGroup: 1,
-    spaceBetween: 50,
+    slidesPerView: 'auto',
+    // spaceBetween: 50,
     loop: true,
-    loopFillGroupWithBlank: true,
+    loopedSlides: "4",
     pagination: {
       el: '.swiper-pagination',
       clickable: true,

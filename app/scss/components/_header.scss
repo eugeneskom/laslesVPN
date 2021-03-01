@@ -1,8 +1,16 @@
 .header {
-  margin-bottom: 130px;
+  position: sticky;
+  top: -10px;
+  z-index: 1000;
+  background: $bg;
 
-  &__top {
-    padding: 44px 0 115px;
+  &__inner {
+    padding: 45px 0 28px;
+    margin-bottom: 60px;
+  }
+
+  &__nav {
+    font-weight: 600;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,28 +20,7 @@
     margin-right: 40px;
   }
 
-  &__nav {
-    font-weight: 600;
-  }
 
-  &__list {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  &__item {
-    &:not(:last-child) {
-      margin-right: 35px;
-    }
-  }
-
-  &__link {
-    transition: all .3s;
-
-    &:hover {
-      color: $accent;
-    }
-  }
 
   &__connect {
     display: flex;
@@ -42,30 +29,66 @@
   &__connect-btn {
     font-weight: 600;
     line-height: 1.2;
-    padding: 13px 30px;
+    padding: 13px 45px;
     border: 1px solid transparent;
     border-radius: 50px;
-    transition: all .3s;
+    transition: all 0.3s;
+    &:hover{
+      color: $accent;
+    }
+    &:active {
+      color: #b6001b;
+    }
 
-    &:hover,
+    &:focus {
+      color: #b6001b; 
+    }
     &--active {
       border: 1px solid $accent;
       color: $accent;
-      padding: 13px 45px;
     }
   }
 
-  &__bottom-inner {
-    position: relative;
+}
+
+
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
   }
 
-  &__bg {
-    position: absolute;
-    bottom: -26px;
-    right: -65px;
-    max-width: 612px;
-    max-height: 382px;
-    object-fit: cover;
+  &__link {
+    transition: color 0.3s;
+    outline: transparent;
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:active {
+      color: #b6001b;
+    }
+
+    &:focus {
+      border-bottom: 1px solid #b6001b; 
+    }
+  }
+}
+
+.hero-section {
+  &__inner {
+    padding: 28px 0 103px;
+    position: relative;
+    max-width: 1208px;
+    margin-left: calc((100vw - 1140px)/2);
+    background-repeat: no-repeat;
+    background-position: right top;
   }
 
   &__content {
@@ -88,5 +111,6 @@
     margin-bottom: 50px;
     @include text-clamp(3);
   }
+
 
 }

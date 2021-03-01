@@ -1,24 +1,5 @@
 $accent: #F53838;
 $text-main: #4F5665;
 $secondary: #0B132A;
+$bg: #f6f6f6;
 
-%btn {
-  background-color: $accent;
-  border: none;
-  outline: transparent;
-  padding: 17px 77px;
-  font-weight: 700;
-  color: #fff;
-  line-height: 25px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all .3s;
-
-  &:hover {
-    background-color: #ff3131;
-  }
-
-  &:active {
-    background-color: #e60808;
-  }
-}
