@@ -14,16 +14,28 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   &__logo {
     margin-right: 40px;
   }
 
-
-
   &__connect {
     display: flex;
+
+    @include r(992) {
+      display: none;
+    }
+
+    &--show {
+      display: flex;
+      width: 100%;
+      order: 3;
+      justify-content: center;
+    }
+
+
   }
 
   &__connect-btn {
@@ -33,29 +45,68 @@
     border: 1px solid transparent;
     border-radius: 50px;
     transition: all 0.3s;
-    &:hover{
+
+
+    &:hover {
       color: $accent;
     }
+
     &:active {
       color: #b6001b;
     }
 
     &:focus {
-      color: #b6001b; 
+      color: #b6001b;
     }
-    &--active {
-      border: 1px solid $accent;
-      color: $accent;
-    }
+
   }
 
 }
 
+.menu-btn {
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-image: url(../../images/icons/menu-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+  outline: none;
+  display: none;
 
+
+  @include r(992) {
+    display: flex;
+    order: 1;
+  }
+
+}
 
 .menu {
   display: flex;
   justify-content: space-around;
+
+  @include r(992) {
+    display: none;
+    width: 100%;
+  }
+
+  &--column {
+    flex-direction: column;
+    display: flex;
+    order: 2;
+
+    .menu__item {
+      display: block;
+      text-align: center;
+
+      &:not(:last-child) {
+        margin: 0 0 5px 0;
+      }
+    }
+  }
+
 
   &__item {
     &:not(:last-child) {
@@ -76,19 +127,27 @@
     }
 
     &:focus {
-      border-bottom: 1px solid #b6001b; 
+      border-bottom: 1px solid #b6001b;
     }
   }
+
 }
 
 .hero-section {
   &__inner {
-    padding: 28px 0 103px;
-    position: relative;
-    max-width: 1208px;
+    padding: 28px 10px 103px;
+    max-width: 1228px;
     margin-left: calc((100vw - 1140px)/2);
     background-repeat: no-repeat;
     background-position: right top;
+
+    @include r(1200) {
+      margin-left: auto;
+    }
+
+    @include r(992) {
+      background-size: cover;
+    }
   }
 
   &__content {

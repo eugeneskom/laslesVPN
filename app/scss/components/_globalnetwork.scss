@@ -5,6 +5,14 @@
     align-items: center;
     text-align: center;
     margin-bottom: 155px;
+
+    @include r(1200) {
+      margin-bottom: 80px;
+    }
+
+    @include r(992) {
+      margin-bottom: 40px;
+    }
   }
 
   &__title {
@@ -13,10 +21,27 @@
 
 
   &__map {
-    margin: 0 auto 5px;
+    display: flex;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: center top;
     max-width: 1060px;
-    max-height: 538px;
+    min-height: 538px;
+
+    @include r(1200) {
+      min-height: 450px;
+    }
+
+    @include r(992) {
+      min-height: 350px;
+    }
+
+    @include r(768) {
+      min-height: 250px;
+    }
+
+    @include r(768) {
+      min-height: 250px;
+    }
   }
 }

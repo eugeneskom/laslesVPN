@@ -7,7 +7,7 @@
   // Fallback for non-Webkit browsers
   // (won't show `…` at the end of the block)
   @if $line-height {
-      max-height: $line-height * $lines * 1px;
+    max-height: $line-height * $lines * 1px;
   }
 }
 
@@ -22,4 +22,3 @@
     @content;
   }
 }
-

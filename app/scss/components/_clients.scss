@@ -1,6 +1,10 @@
 .clients {
   &__wrapper {
     padding: 55px 0 0;
+
+    @include r(768) {
+      padding: 25px 0 0;
+    }
   }
 
   &__list {

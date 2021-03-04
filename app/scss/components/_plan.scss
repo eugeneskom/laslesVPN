@@ -1,6 +1,11 @@
 .plan {
   &__inner {
     padding: 80px 28px 150px;
+
+    @include r(1200) {
+      padding: 50px 0;
+
+    }
   }
 
   &__intro {
@@ -12,17 +17,36 @@
   &__types {
     display: flex;
     justify-content: space-between;
+
+    @include r(992) {
+      flex-direction: column;
+    }
   }
 
   &__card {
     padding: 275px 67px 50px;
     background-repeat: no-repeat;
+    background-image: url('../../images/box.svg');
     background-position: center 80px;
+    background-size: auto;
     border: 2px solid #DDDDDD;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     background-color: #fff;
+
+    @include r(1200) {
+      padding: 30px 35px 50px;
+      background-image: none;
+    }
+
+    @include r(992) {
+      background-image: url('../../images/box.svg');
+      background-size: auto;
+      background-position: right center;
+      margin-bottom: 30px;
+      padding: 30px 35px 10px;
+    }
 
     &--active {
       border-color: $accent;
@@ -93,22 +117,25 @@
     &:hover {
       background-color: #ff3131;
       color: #fff;
-      border-color:#ff3131;
+      border-color: #ff3131;
     }
-    &:active{
+
+    &:active {
       background-color: #c70505;
       color: #fff;
-      border-color:#c70505;
+      border-color: #c70505;
     }
-    &:focus{
-    box-shadow: 0 0 0 2pt rgba(112, 4, 4, 0.94);
+
+    &:focus {
+      box-shadow: 0 0 0 2pt rgba(112, 4, 4, 0.94);
     }
 
     &--active {
       background-color: $accent;
       color: #fff;
     }
-    &::after{
+
+    &::after {
       content: "";
       position: absolute;
     }

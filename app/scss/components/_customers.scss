@@ -1,5 +1,10 @@
 .customers {
   padding-bottom: 100px;
+  background-color: #f6f6f6;
+
+  @include r(768) {
+    margin-bottom: 20px;
+  }
 
   & .swiper-wrapper {
     height: 275px;
@@ -7,7 +12,12 @@
 
 
   &__inner {
-    padding: 80px 0 80px;
+    padding: 80px 0;
+
+    @include r(992) {
+      padding: 40px 0;
+
+    }
   }
 
   &__content {
@@ -26,14 +36,16 @@
     @include text-clamp(3);
   }
 
-
-
   .swiper-wrapper {
     padding: 0 0 75px;
   }
 
   .swiper-container {
     margin-left: calc((100vw - 1140px) / 2);
+
+    @include r(1200) {
+      margin-left: 10px;
+    }
   }
 
   .swiper-slide-active {
@@ -50,16 +62,25 @@
     width: 60px;
     height: 60px;
     outline: transparent;
+
+    @include r(768) {
+      width: 30px;
+      height: 30px;
+      margin-top: auto;
+    }
   }
+
   .swiper-button-prev,
-  .swiper-button-next  {
-    &:hover{
+  .swiper-button-next {
+    &:hover {
       background-color: #d60121;
     }
-    &:active{
+
+    &:active {
       background-color: #f70126;
     }
-    &:focus{
+
+    &:focus {
       border: 2px solid #a2051c;
 
     }
@@ -68,11 +89,19 @@
   .swiper-button-prev {
     right: 230px;
     left: auto;
+
+    @include r(768) {
+      right: 80px;
+    }
   }
 
   .swiper-button-next {
     right: 150px;
     left: auto;
+
+    @include r(768) {
+      right: 10px;
+    }
   }
 
   .swiper-button-next,
@@ -127,13 +156,15 @@
     &:not(:last-child) {
       margin: 0 15px 0 0;
     }
-    &:hover{
-      background-color:#2982e7;
+
+    &:hover {
+      background-color: #2982e7;
     }
-    &:active{
-      background-color:#0026fc;
+
+    &:active {
+      background-color: #0026fc;
     }
-    
+
   }
 
   .swiper-pagination-bullet-active {
@@ -141,21 +172,17 @@
     height: 15px;
     border-radius: 10px;
     background-color: $accent;
-    &:hover{
-      background-color:#F53838;
+
+    &:hover {
+      background-color: #F53838;
     }
-    &:active{
-      background-color:#F53838;
+
+    &:active {
+      background-color: #F53838;
     }
   }
 
-
-
-
 }
-
-
-
 
 .card {
   border-radius: 10px;
@@ -165,6 +192,10 @@
   width: 400px;
   height: 230px;
   position: relative;
+
+  @include r(992) {
+    padding: 15px;
+  }
 
   &::after {
     content: "";
@@ -194,6 +225,10 @@
 
   &__content {
     @include text-clamp(4);
+
+    @include r(992) {
+      font-size: 14px;
+    }
   }
 
   .rating {
@@ -216,6 +251,11 @@
   &.swiper-slide {
     box-sizing: border-box;
     width: 400px !important;
+
+    @include r(992) {
+      width: 300px !important;
+
+    }
 
     &:not(:last-child) {
       margin-right: 50px;

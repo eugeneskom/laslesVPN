@@ -43,6 +43,7 @@ body {
   border-radius: 10px;
   transition: background-color 0.3s;
   cursor: pointer;
+
   &::after {
     content: "";
     position: absolute;
@@ -69,15 +70,6 @@ body {
   }
 }
 
-.title {
-  font-weight: 500;
-  font-size: 35px;
-  line-height: 1.4;
-  text-transform: capitalize;
-  color: $secondary;
-  margin-bottom: 20px;
-}
-
 @mixin text-clamp($lines: 2, $line-height: false) {
   overflow: hidden;
   display: -webkit-box;
@@ -90,6 +82,33 @@ body {
     max-height: $line-height * $lines * 1px;
   }
 }
+
+@mixin r($width) {
+  @media only screen and (max-width: $width+ "px") {
+    @content;
+  }
+}
+
+@mixin rmin($width) {
+  @media only screen and (min-width: $width+ "px") {
+    @content;
+  }
+}
+
+.title {
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 1.4;
+  text-transform: capitalize;
+  color: $secondary;
+  margin-bottom: 20px;
+
+  @include r(500) {
+    font-size: 28px;
+  }
+}
+
+
 
 
 .intro-text {
