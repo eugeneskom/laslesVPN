@@ -1,13 +1,88 @@
+
+
 $(function () {
 
+  function setFormMessage(formElement, type, message) {
+    const messageElement = formElement.querySelector(".modal__message");
+
+    messageElement.textContent = message;
+    messageElement.classList.remove("modal__message--success", "modal__message--error");
+    messageElement.classList.add('modal__message--' + type);
+  }
+
+  function setInputError(inputElement, message) {
+    inputElement.classList.add('modal__input--error');
+    inputElement.parentElement.querySelector('.modal__input-error-message').textContent = message;
+  }
+
+  function clearInputError(inputElement) {
+    inputElement.classList.remove('modal__input--error');
+    inputElement.parentElement.querySelector('.modal__input-error-message').textContent = '';
+
+  }
 
 
-  $('.header__connect-btn').on('click', function (e) {
+  const loginForm = document.querySelector('#login');
+  const createAccountForm = document.querySelector('#createAccount');
+
+  document.querySelector('#linkCreateAccount').addEventListener('click', (e) => {
     e.preventDefault();
-    $('.header__connect-btn').removeClass('header__connect-btn--active');
-    $(this).addClass('header__connect-btn--active');
+    loginForm.classList.add('modal__form--hidden');
+    createAccountForm.classList.remove('modal__form--hidden');
+  })
+
+  document.querySelector('#linkLogin').addEventListener('click', (e) => {
+    e.preventDefault();
+    loginForm.classList.remove('modal__form--hidden');
+    createAccountForm.classList.add('modal__form--hidden');
+  })
+
+  loginForm.addEventListener('submit', e => {
+    e.preventDefault();
+    setFormMessage(loginForm, 'error', 'Invalid username/password combination')
+  });
+
+  document.querySelectorAll('.modal__input').forEach(inputElement => {
+    inputElement.addEventListener('blur', e => {
+      if (e.target.id === 'signupUsername' && e.target.value.length > 0 && e.target.value.length < 10) {
+        setInputError(inputElement, 'Username must be at least 10 characters in length');
+      }
+    });
+
+    inputElement.addEventListener('input', e => {
+      clearInputError(inputElement);
+    })
+  });
+
+
+  let modal = document.querySelector('.modal');
+  let modalForms = document.querySelectorAll('.modal__form');
+
+  document.addEventListener("click", (e) => {
+
+    if (e.target.classList.contains('modal')) {
+      modal.style.display = 'none';
+    } else if (e.target.classList.contains('header__connect-btn--login')) {
+      e.preventDefault();
+      modal.style.display = 'flex';
+      modalForms[0].style.display = 'block';
+      modalForms[1].style.display = 'none';
+    } else if (e.target.classList.contains('header__connect-btn--signup')) {
+      e.preventDefault();
+      modal.style.display = 'flex';
+      modalForms[0].style.display = 'none';
+      modalForms[1].style.display = 'block';
+    } else if (e.target.classList.contains('modal__link--login')) {
+      modalForms[0].style.display = 'none';
+      modalForms[1].style.display = 'block';
+    } else if (e.target.classList.contains('modal__link--signup')) {
+      modalForms[0].style.display = 'block';
+      modalForms[1].style.display = 'none';
+    }
 
   });
+
+  ////////////////////////////////
 
   $('.plan__btn').on('click', function (e) {
     e.preventDefault();
@@ -84,6 +159,34 @@ $(function () {
     $('.header__connect').toggleClass('header__connect--show');
 
   });
+
+
+
+// handle links with @href started with '#' only
+$(document).on('click', 'a[href^="#"]', function(e) {
+  // target element id
+  var id = $(this).attr('href');
+
+  // target element
+  var $id = $(id);
+  if ($id.length === 0) {
+      return;
+  }
+
+  // prevent standard hash navigation (avoid blinking in IE)
+  e.preventDefault();
+
+  // top position relative to the document
+  var pos = $id.offset().top;
+
+  // animated top scrolling
+  $('body, html').animate({scrollTop: pos});
+});
+
+
+
+
+
 
 
 });

@@ -42,8 +42,57 @@
             </li>
           </ul>
           <div class="header__connect">
-            <a class="header__connect-btn" href="#">Sign In</a>
-            <a class="header__connect-btn" href="#">Sign Up</a>
+            <a class="header__connect-btn header__connect-btn--login" href="#">Log In</a>
+            <a class="header__connect-btn header__connect-btn--signup" href="#">Sign Up</a>
+          </div>
+          <div class="modal">
+            <div class="modal__wrapper">
+              <form class="modal__form" id="login">
+                <h1 class="modal__title">Login</h1>
+                <div class="modal__message modal__message--error"></div>
+                <div class="modal__input-group">
+                  <input class="modal__input" type="text" autofocus placeholder="Username or email">
+                  <div class="modal__input-error-message"></div>
+                </div>
+                <div class="modal__input-group">
+                  <input class="modal__input" type="password" autofocus placeholder="Password">
+                  <div class="modal__input-error-message"></div>
+                </div>
+                <button class="modal__button" type="submit">Continue</button>
+                <p class="modal__text">
+                  <a class="modal__link" href="#">Forgot your password?</a>
+                </p>
+                <p class="modal__text">
+                  <a class="modal__link modal__link--login" id="linkCreateAccount">Don't have an account? Create account</a>
+                </p>
+              </form>
+              <form class="modal__form modal__form--hidden" id="createAccount">
+                <h1 class="modal__title">Sign Up</h1>
+                <div class="modal__message modal__message--error"></div>
+                <div class="modal__input-group">
+                  <input class="modal__input" type="text" id="signupUsername" autofocus placeholder="Username">
+                  <div class="modal__input-error-message"></div>
+                </div>
+                <div class="modal__input-group">
+                  <input class="modal__input" type="text" autofocus placeholder="Email Address">
+                  <div class="modal__input-error-message"></div>
+                </div>
+                <div class="modal__input-group">
+                  <input class="modal__input" type="password" autofocus placeholder="Password">
+                  <div class="modal__input-error-message"></div>
+                </div>
+                <div class="modal__input-group">
+                  <input class="modal__input" type="password" autofocus placeholder="Confirm password">
+                  <div class="modal__input-error-message"></div>
+                </div>
+                <button class="modal__button" type="submit">Continue</button>
+
+                <p class="modal__text">
+                  <a class="modal__link modal__link--signup" id="linkLogin">Alredy have an account? Sign in</a>
+                </p>
+              </form>
+            </div>
+
           </div>
         </nav>
       </div>
