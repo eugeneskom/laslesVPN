@@ -30,6 +30,7 @@ function styles() {
       grid: true
     }))
     .pipe(dest('app/css'))
+    .pipe(dest('css'))
     .pipe(browserSync.stream())
 }
 
