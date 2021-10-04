@@ -48,6 +48,7 @@ function images() {
       })
     ]))
     .pipe(dest('dist/images'))
+    .pipe(dest('images'))
 }
 
 function scripts() {
