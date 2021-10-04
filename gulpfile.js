@@ -6,7 +6,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const rename = require('gulp-rename');
-const nunjucksRender = require('gulp-nunjucks-render');
+// const nunjucksRender = require('gulp-nunjucks-render');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 
@@ -19,17 +19,9 @@ function browsersync() {
   })
 }
 
-// function nunjucks() {
-//   return src('app/*.njk')
-//     .pipe(nunjucksRender())
-//     .pipe(dest('app'))
-//     .pipe(browserSync.stream())
-// }
-
 function styles() {
   return src('app/scss/*.scss')
     .pipe(scss({ outputStyle: 'compressed' }))
-    // .pipe(concat(''))
     .pipe(rename({
       suffix: '.min'
     }))

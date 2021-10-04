@@ -1,6 +1,6 @@
 .plan {
   &__inner {
-    padding: 80px 28px 150px;
+    padding: 120px 28px 150px;
 
     @include r(1200) {
       padding: 50px 0;
@@ -26,7 +26,7 @@
   &__card {
     padding: 275px 67px 50px;
     background-repeat: no-repeat;
-    background-image: url('../../images/box.svg');
+    background-image: url('../images/box.svg');
     background-position: center 80px;
     background-size: auto;
     border: 2px solid #DDDDDD;

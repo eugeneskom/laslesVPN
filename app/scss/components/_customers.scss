@@ -1,6 +1,6 @@
 .customers {
   padding-bottom: 100px;
-  background-color: #f6f6f6;
+  background-color: $bg;
 
   @include r(768) {
     margin-bottom: 20px;
@@ -42,6 +42,7 @@
 
   .swiper-container {
     margin-left: calc((100vw - 1140px) / 2);
+    
 
     @include r(1200) {
       margin-left: 10px;
@@ -112,11 +113,11 @@
   }
 
   .swiper-button-next {
-    background-image: url(../../images/icons/next-arrow.svg);
+    background-image: url(../images/icons/next-arrow.svg);
   }
 
   .swiper-button-prev {
-    background-image: url(../../images/icons/prev-arrow.svg);
+    background-image: url(../images/icons/prev-arrow.svg);
   }
 
   .swiper-button-next::after,
@@ -132,12 +133,12 @@
   }
 
   .swiper-button-prev.swiper-button-disabled {
-    background-image: url(../../images/icons/prev-arrow--disable.svg);
+    background-image: url(../images/icons/prev-arrow--disable.svg);
 
   }
 
   .swiper-button-next.swiper-button-disabled {
-    background-image: url(../../images/icons/next-arrow--disable.svg);
+    background-image: url(../images/icons/next-arrow--disable.svg);
 
   }
 
@@ -204,7 +205,6 @@
     right: -87px;
     bottom: -70px;
     left: 168px;
-    background: #0D1025;
     opacity: 0.06;
     filter: blur(114px);
     border-radius: 10px;
